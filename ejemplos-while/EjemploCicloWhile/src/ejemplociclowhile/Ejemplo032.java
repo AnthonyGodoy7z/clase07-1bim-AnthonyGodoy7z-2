@@ -34,7 +34,6 @@ public class Ejemplo032 {
             } else{
                 suma = suma + 50;
             }
-            suma = suma + valor_ingresado;
             System.out.printf("Valor ingresado %d\n", 
                     valor_ingresado);
             contador = contador + 1;

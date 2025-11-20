@@ -1,0 +1,52 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package ejercicio1;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+/**
+ *
+ * @author UTPL
+ */
+public class Ejercicio1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+         //TODO code application logic here
+        Scanner entrada = new Scanner(System.in);
+        entrada.useLocale(Locale.US);
+        
+        String mensaje = "";
+        String nombre;
+        int dias;
+        double costo_dia;
+        double valor_cancelar;
+        int contador = 1;
+        
+        while (contador<=5) {
+            System.out.println("Ingrese nombre de empleado");
+            nombre = entrada.nextLine();
+            
+            System.out.println("Ingrese dias trabajados");
+            dias = entrada.nextInt();
+            
+            System.out.println("Ingrese valor de costo dia");
+            costo_dia = entrada.nextDouble();
+            entrada.nextLine();
+            
+            valor_cancelar = dias * costo_dia;
+            
+            mensaje += String.format("Nombre %s: días %d, costo por día $"
+                    +"%.2f, total $%.2f\n", nombre, dias, costo_dia,
+                    valor_cancelar);
+            contador = contador + 1;
+        }
+        System.out.printf("%s\n", mensaje);
+    }    
+    
+}

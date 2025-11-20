@@ -41,8 +41,8 @@ public class Ejercicio1 {
             
             valor_cancelar = dias * costo_dia;
             
-            mensaje += String.format("Nombre %s: días %d, costo por día $"
-                    +"%.2f, total $%.2f\n", nombre, dias, costo_dia,
+            mensaje = String.format("%sNombre %s: días %d, costo por día $"
+                    +"%.2f, total $%.2f\n", mensaje, nombre, dias, costo_dia,
                     valor_cancelar);
             contador = contador + 1;
         }
